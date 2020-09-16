@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel=stylesheet href="myStyle.css" type="text/css">
 		<title>Science of Skincare</title>
 	</head>
@@ -10,22 +13,7 @@
 			<p>This page is under construction.</p>
 			<p>Hello World!</p>
 			<p>The current background color is: <span id="hex"></span></p>
-		<script>
-			function myColor(){
-				var hexColor = [];
-				while (hexColor.length < 6){
-					//generates each digit of the hex color for page's background
-					//only allows for light colors to create pastel effect (10 - 15)							
-					var x = (Math.ceil(Math.random()*6)) + 9;
-					var y = x.toString(16);
-					hexColor.push(y);
-				}
-				var bgColor = "#";
-				for (var i = 0; i < hexColor.length; i++)
-					bgColor+= hexColor[i];				
-				document.body.style.backgroundColor = bgColor;
-				document.getElementById("hex").innerText = bgColor.toUpperCase();
-			}
-		</script>
+			
+		<script src="myColor.js"></script>
 	</body>
 </html>
