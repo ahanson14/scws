@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel=stylesheet href="myStyle.css" type="text/css">
+		<title>Science of Skincare</title>
+	</head>
+	<body onload="myColor()">
+		<p><img src="marshall-present.gif" alt="Marshall" style="float:right;width:208px;height:338px;"></p>
+		<h2>Pardon my mess</h3>
+			<p>This page is under construction.</p>
+			<p>Hello World!</p>
+			<p>The current background color is: <span id="hex"></span></p>
+		<script>
+			function myColor(){
+				var hexColor = [];
+				while (hexColor.length < 6){
+					//generates each digit of the hex color for page's background
+					//only allows for light colors to create pastel effect (10 - 15)							
+					var x = (Math.ceil(Math.random()*6)) + 9;
+					var y = x.toString(16);
+					hexColor.push(y);
+				}
+				var bgColor = "#";
+				for (var i = 0; i < hexColor.length; i++)
+					bgColor+= hexColor[i];				
+				document.body.style.backgroundColor = bgColor;
+				document.getElementById("hex").innerText = bgColor.toUpperCase();
+			}
+		</script>
+	</body>
+</html>
